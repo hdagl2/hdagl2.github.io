@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 10, "titleFontSize": 12}, "title": {"fontSize": 14}}, "data": {"name": "data-9155065184bc034766cce593f21b9a0e"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Unique Buildings", "scale": {"scheme": "blues"}, "type": "quantitative"}, "tooltip": [{"field": "City", "type": "nominal"}, {"field": "Unique Buildings", "type": "quantitative"}], "x": {"field": "Unique Buildings", "title": "Number of Unique Building Locations", "type": "quantitative"}, "y": {"field": "City", "sort": "-x", "title": "City", "type": "nominal"}}, "height": 400, "title": "Top 20 Cities by Number of Unique Building Locations", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-9155065184bc034766cce593f21b9a0e": [{"City": "Springfield", "Unique Buildings": 53}, {"City": "Chicago", "Unique Buildings": 40}, {"City": "Effingham", "Unique Buildings": 9}, {"City": "Joliet", "Unique Buildings": 9}, {"City": "Elgin", "Unique Buildings": 8}, {"City": "Peoria", "Unique Buildings": 8}, {"City": "Lincoln", "Unique Buildings": 8}, {"City": "Carbondale", "Unique Buildings": 7}, {"City": "Ottawa", "Unique Buildings": 7}, {"City": "East St Louis", "Unique Buildings": 7}, {"City": "Rockford", "Unique Buildings": 6}, {"City": "Mt Vernon", "Unique Buildings": 6}, {"City": "Dixon", "Unique Buildings": 6}, {"City": "Champaign", "Unique Buildings": 6}, {"City": "Kankakee", "Unique Buildings": 6}, {"City": "Vandalia", "Unique Buildings": 5}, {"City": "Pontiac", "Unique Buildings": 5}, {"City": "Jacksonville", "Unique Buildings": 5}, {"City": "Litchfield", "Unique Buildings": 5}, {"City": "Kinmundy", "Unique Buildings": 5}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
