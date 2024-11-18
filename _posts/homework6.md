@@ -10,3 +10,8 @@ I applied data transformations to filter out entries with missing latitude/longi
 
 Discussion of Interactivity
 The second plot includes hover-based interactivity, which allows users to explore specific details about each building without overwhelming the visualization with text. This interactivity makes the map more engaging and informative, especially when dealing with a large number of data points.
+
+### Links
+
+- [The Data]([https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv])
+- [The Analysis]([https://github.com/your_username/your_repo/blob/main/Workbook.ipynb])
